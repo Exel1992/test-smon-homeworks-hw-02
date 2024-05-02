@@ -2,7 +2,7 @@
 
 
 ### Задание 1
-[Скрин] (https://github.com/Exel1992/test-smon-homeworks-hw-02/blob/main/Autorisation.png)
+![Скрин](https://github.com/Exel1992/test-smon-homeworks-hw-02/blob/main/Autorisation.png)
 
 [Команды]
 ```
@@ -22,11 +22,11 @@ systemctl status zabbix_server.service
 ---
 
 ### Задание 2
-[Hosts] (https://github.com/Exel1992/test-smon-homeworks-hw-02/blob/main/Configuration.png)
+![Hosts](https://github.com/Exel1992/test-smon-homeworks-hw-02/blob/main/Configuration.png)
 
-[logs] (https://github.com/Exel1992/test-smon-homeworks-hw-02/blob/main/logs.png)
+![logs](https://github.com/Exel1992/test-smon-homeworks-hw-02/blob/main/logs.png)
 
-[Latest_data] (https://github.com/Exel1992/test-smon-homeworks-hw-02/blob/main/Latest_data.png)
+![Latest_data](https://github.com/Exel1992/test-smon-homeworks-hw-02/blob/main/Latest_data.png)
 
 [Команды]
 ```
