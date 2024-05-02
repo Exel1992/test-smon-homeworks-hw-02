@@ -1,20 +1,34 @@
-# Домашние задания по модулю «Мониторинг»
-
-В этом репозитории расположены ваши домашние задания к каждой лекции. 
-
-Обязательны к выполнению задачи без звездочек. Их нужно выполнить, чтобы получить зачёт.
-
-Задачи со звёздочкой (*) — дополнительные задачи или задачи повышенной сложности. Их выполнять не обязательно, но они помогут вам глубже понять тему.
-
-Любые вопросы по решению задач задавайте в чате учебной группы. Ссылку вы найдёте в письме на вашей электронной почте.
+# Домашние задания по модулю «Система мониторинга Zabbix» - `Тихомиров Алексей`
 
 
-1. [Обзор систем ИТ-мониторинга](hw-01-new.md)
+### Задание 1
+[Скрин] https://github.com/Exel1992/test-smon-homeworks-hw-02/blob/main/Autorisation.png
 
-2. [Система мониторинга Zabbix](hw-02.md)
+[Команды]
+# wget https://repo.zabbix.com/zabbix/6.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_6.0-4+ubuntu22.04_all.deb
+# dpkg -i zabbix-release_6.0-4+ubuntu22.04_all.deb
+# apt update
+# apt install zabbix-server-pgsql zabbix-frontend-php php8.1-pgsql zabbix-apache-conf zabbix-sql-scripts zabbix-agent
+su - postgres -c 'psql --command "CREATE USER zabbix WITH PASSWORD '\'123456789\'';"'
+su - postgres -c 'psql --command "CREATE DATABASE zabbix OWNER zabbix;"'
+zcat /usr/share/zabbix-sql-scripts/postgresql/server.sql.gz | sudo -u zabbix psql zabbix
+nano /etc/zabbix/zabbix_server.conf
+systemctl restart zabbix-server apache2
+systemctl enable zabbix-server apache2
+systemctl status zabbix_server.service
 
-3. [Система мониторинга Zabbix. Часть 2](hw-03.md)
 
-4. [Система мониторинга Prometheus](hw-04.md)
+---
 
-5. [Система мониторинга Prometheus. Часть 2](hw-05.md)
+### Задание 2
+[Hosts] https://github.com/Exel1992/test-smon-homeworks-hw-02/blob/main/Configuration.png
+
+[logs] https://github.com/Exel1992/test-smon-homeworks-hw-02/blob/main/logs.png
+
+[Latest_data] https://github.com/Exel1992/test-smon-homeworks-hw-02/blob/main/Latest_data.png
+
+[Команды]
+[]apt install zabbix-agent
+systemctl restart zabbix-agent
+systemctl enable zabbix-agent
+nano /etc/zabbix/zabbix_agentd.conf
